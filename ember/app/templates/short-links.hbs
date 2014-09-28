@@ -1,5 +1,5 @@
 {{input value=url onEvent="enter" action="createShortLink"}}
-
+<button {{action "createShortLink"}}>Get Shorty</button>
 
 {{#each post in model itemController="short-link-controller"}}
   <p>
