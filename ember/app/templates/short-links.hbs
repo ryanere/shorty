@@ -1,6 +1,6 @@
-{{#each post in model}}
+{{#each post in model itemController="short-link-controller"}}
   <p>
-    {{post.url}}
+    <a {{bind-attr href="controller.outboundLink"}}>{{controller.outboundLink}}</a>
   </p>
 {{/each}}
 
