@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('shortens', { path: '/' });
+  this.resource('short-links', { path: '/' });
 });
 
 export default Router;

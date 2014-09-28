@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('shorten', 'Shorten', {
+moduleForModel('short-link', 'Shorten', {
   // Specify the other units that are required for this test.
   needs: []
 });

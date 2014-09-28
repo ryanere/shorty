@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 5.times do |i|
-  Shorten.create(url: "http://awesome-#{i+1}.com")
+  ShortLink.create(url: "http://awesome-#{i+1}.com")
 end
