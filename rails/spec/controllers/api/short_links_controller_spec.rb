@@ -12,7 +12,7 @@ describe Api::ShortLinksController, :type => :controller do
 
     it "renders json with all posts" do
       get :index
-      expect(response.body).to include "shortens"
+      expect(response.body).to include "short_links"
     end
   end
 

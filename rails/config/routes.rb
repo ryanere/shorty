@@ -55,6 +55,6 @@ Rails.application.routes.draw do
   #   end
 
   namespace :api do
-    resources :shortens
+    resources :short_links
   end
 end
