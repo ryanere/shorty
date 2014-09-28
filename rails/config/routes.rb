@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  get "s/:token" => 'application#outbound'
+
   namespace :api do
     resources :short_links
   end
