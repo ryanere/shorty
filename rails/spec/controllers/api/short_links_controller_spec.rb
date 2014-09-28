@@ -4,7 +4,6 @@ require 'spec_helper'
 describe Api::ShortLinksController, :type => :controller do
 
   describe "#index" do
-
     it "should respond with ok status code" do
       get :index
       expect(response).to be_success
@@ -59,5 +58,4 @@ describe Api::ShortLinksController, :type => :controller do
       end
     end
   end
-
 end
