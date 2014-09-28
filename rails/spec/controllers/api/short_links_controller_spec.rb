@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'spec_helper'
 
 describe Api::ShortLinksController, :type => :controller do
-
   describe "#index" do
     it "should respond with ok status code" do
       get :index
@@ -56,6 +55,25 @@ describe Api::ShortLinksController, :type => :controller do
       it "responds with 422 http status" do
         expect(response.status).to eq 422
       end
+    end
+  end
+
+  describe "#show" do
+    let(:short_link) { ShortLink.create(url: 'http://awesome.com') }
+
+    it "responds with ok status code" do
+      get :show, id: short_link.id
+      expect(response).to be_success
+    end
+
+    it "assigns the short_link" do
+      get :show, id: short_link.id
+      expect(assigns(:short_link)).to eq short_link
+    end
+
+    it "renders user json" do
+      get :show, id: short_link.id
+      expect(response.body).to include "short_link"
     end
   end
 end

@@ -15,6 +15,11 @@ class Api::ShortLinksController < ApplicationController
     end
   end
 
+  def show
+    @short_link = ShortLink.find_by_id(params[:id])
+    render json: @short_link
+  end
+
   private
 
   def permitted_params
