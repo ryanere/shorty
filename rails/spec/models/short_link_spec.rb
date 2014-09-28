@@ -4,7 +4,7 @@ require 'spec_helper'
 describe ShortLink do
 
   context '#create' do
-    let!(:short_link) { ShortLink.create(url: 'http://awesome.com') }
+    let(:short_link) { ShortLink.create(url: 'http://awesome.com') }
 
     it 'has url attribute' do
       expect(short_link.url).to eq 'http://awesome.com'
