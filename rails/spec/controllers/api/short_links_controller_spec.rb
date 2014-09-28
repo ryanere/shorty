@@ -16,4 +16,11 @@ describe Api::ShortLinksController, :type => :controller do
     end
   end
 
+  describe '#create' do
+    it 'should create a link' do
+      post :create, short_link: { url: "http://awesome.com" }, format: :json
+      expect(ShortLink.last.url).to eq "http://awesome.com"
+    end
+  end
+
 end
