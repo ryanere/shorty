@@ -10,7 +10,9 @@ export default Ember.Controller.extend({
 
       controller.store.createRecord('short-link', {
         url: url
-      }).save();
+      }).save().then(function(shortLink) {
+        controller.transitionToRoute('short-links.show', shortLink.id);
+      });
     }
   }
 });
