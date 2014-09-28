@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('route:short-links', 'ShortLinksRoute', {
+moduleFor('route:short-links/show', 'ShortLinksShowRoute', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

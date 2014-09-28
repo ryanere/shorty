@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:short-link', 'ShortLinkController', {
+moduleFor('controller:short-links/show', 'ShortLinksShowController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
