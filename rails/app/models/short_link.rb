@@ -1,4 +1,7 @@
 class ShortLink < ActiveRecord::Base
+  validates_presence_of :url, presence: true
+  validates_url :url, url: true
+
   before_validation :assign_token, on: :create
 
   private

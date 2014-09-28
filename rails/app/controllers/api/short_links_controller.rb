@@ -7,9 +7,12 @@ class Api::ShortLinksController < ApplicationController
 
   def create
     @short_link = ShortLink.new(permitted_params)
-    @short_link.save
 
-    render json: @short_link
+    if @short_link.save
+      render json: @short_link
+    else
+      render json: { errors: @short_link.errors }, status: :unprocessable_entity
+    end
   end
 
   private
