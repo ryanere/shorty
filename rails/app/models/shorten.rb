@@ -1,5 +1,5 @@
 class Shorten < ActiveRecord::Base
-  before_validation(:assign_token)
+  before_validation :assign_token, on: :create
 
   private
   def assign_token
