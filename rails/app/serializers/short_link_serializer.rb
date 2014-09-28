@@ -1,3 +1,3 @@
 class ShortLinkSerializer < ActiveModel::Serializer
-  attributes :id, :url
+  attributes :id, :url, :token
 end
