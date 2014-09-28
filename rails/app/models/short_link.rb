@@ -1,4 +1,4 @@
-class Shorten < ActiveRecord::Base
+class ShortLink < ActiveRecord::Base
   before_validation :assign_token, on: :create
 
   private

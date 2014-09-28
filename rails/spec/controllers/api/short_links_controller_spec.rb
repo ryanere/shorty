@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'spec_helper'
 
-describe Api::ShortensController, :type => :controller do
+describe Api::ShortLinksController, :type => :controller do
 
   describe "#index" do
 
