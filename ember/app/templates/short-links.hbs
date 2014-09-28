@@ -1,4 +1,9 @@
 {{input value=url onEvent="enter" action="createShortLink"}}
+
+{{#if errors}}
+  {{errors.url}}
+{{/if}}
+
 <button {{action "createShortLink"}}>Get Shorty</button>
 
 {{outlet}}
