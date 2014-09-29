@@ -18,5 +18,9 @@
     padding: 0 ($base-font-size * 2);
     margin-top: $row-height;
     @include adjust-font-size-to($base-font-size * 0.9);
+
+    @include phone {
+      @include adjust-font-size-to($base-font-size * 0.7);
+    };
   }
 }
