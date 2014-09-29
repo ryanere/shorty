@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.HOST = 'http://awesome.com';
+    ENV.APP.HOST = 'http://shortyrules.herokuapp.com/';
   }
 
   return ENV;
