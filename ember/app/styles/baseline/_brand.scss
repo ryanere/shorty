@@ -1,0 +1,32 @@
+.brand {
+  margin: ($row-height * 2) 0;
+  text-align: center;
+
+  @include phone {
+    margin: ($row-height * 2) 0 $row-height;
+  };
+}
+.brand-link {
+  display: inline-block;
+  margin-bottom: $row-height;
+}
+.brand-text {
+  display: inline-block;
+  color: $white;
+  margin: 0;
+  @include text-shadow($base-shadow 0 2px 0);
+  @include adjust-font-size-to($base-font-size * 4.5);
+
+  @include phone {
+    @include adjust-font-size-to($base-font-size * 3.5);
+  };
+}
+.brand-subhead {
+  font-family: $subhead-font-family;
+  @include text-shadow($base-shadow 0 1px 0);
+  @include adjust-font-size-to($base-font-size * 2);
+
+  @include phone {
+    @include adjust-font-size-to($base-font-size * 1.2);
+  };
+}

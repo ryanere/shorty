@@ -1,0 +1,155 @@
+@mixin remove-tap-highlight() {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin font-smoothing($val: antialiased) {
+  -webkit-font-smoothing: $val !important;
+  -moz-font-smoothing: $val !important;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: $val !important;
+  -o-font-smoothing: $val !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+@mixin text-size-adjust() {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+@mixin user-select($val: none) {
+  -webkit-user-select: $val;
+  -moz-user-select: $val;
+  -ms-user-select: $val;
+  -o-user-select: $val;
+  user-select: $val;
+}
+
+@mixin clearfix() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+@mixin hardware-accelerate {
+  @include translateZ(0);
+}
+
+@mixin phone {
+  @media #{$small-only} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$medium-only} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$large-only} {
+    @content;
+  }
+}
+
+@mixin phone-up {
+  @media #{$small} {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media #{$medium} {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media #{$large} {
+    @content;
+  }
+}
+
+
+@mixin button-scaffold {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 ($base-font-size * 1.1);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-family: $button-font-family;
+  @include adjust-font-size-to($base-font-size * 1.2);
+  @include font-smoothing;
+  @include appearance(none);
+  @include transition-property(background-color);
+  @include transition-duration($base-transition-duration);
+  @include transition-property(linear);
+  @include hardware-accelerate;
+
+  @include tablet-up {
+    & {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+@mixin button-styles($color, $background-color, $background-color-hover, $box-shadow, $text-shadow, $border-radius) {
+  color: $color;
+  background-color: $background-color;
+  @include box-shadow($box-shadow);
+  @include text-shadow($text-shadow);
+  @include border-radius($border-radius);
+
+  &:active {
+    background-color: $background-color-hover;
+  }
+
+  &:hover {
+    color: $color;
+    background-color: $background-color-hover;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+
+      .no-touch & {
+        background-color: $background-color;
+      }
+    }
+  }
+}
+
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    @include font-smoothing;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    @include font-smoothing;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    @include font-smoothing;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    @include font-smoothing;
+  }
+}

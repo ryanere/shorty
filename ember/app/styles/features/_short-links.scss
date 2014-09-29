@@ -1,0 +1,26 @@
+.short-links {
+  .short-links-cta { @include clearfix; }
+  .short-links-cta-input-field {
+    @include phone {
+      margin-bottom: $row-height;
+    };
+  }
+  .short-links-cta-create-button {
+    width: 100%;
+    height: $row-height * 2.5;
+
+    @include tablet {
+      @include adjust-font-size-to($base-font-size);
+    };
+  }
+  .short-links-errors {
+    font-weight: bold;
+    padding: 0 ($base-font-size * 2);
+    margin-top: $row-height;
+    @include adjust-font-size-to($base-font-size * 0.9);
+
+    @include phone {
+      @include adjust-font-size-to($base-font-size * 0.7);
+    };
+  }
+}

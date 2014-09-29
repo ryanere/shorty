@@ -1,0 +1,116 @@
+/***
+  Generic Colors
+**/
+$white: #fff;
+$black: #000;
+$red: #df3b28;
+$orange: #f1910e;
+$yellow: #e9c90d;
+$green: #b6d400;
+$teal: #54c8d4;
+$blue: #43b0dd;
+$purple: #8d95b3;
+$magenta: #a1788d;
+
+$gray-light: #eef3f7;
+$gray-medium: #8b95a5;
+$gray-dark: #4e515e;
+
+
+/***
+  Specific Colors
+**/
+$body-background-color: #26ADE4;
+$body-background-color-highlight: #4DBCE9;
+$base-font-color: $white;
+$link-color: $teal;
+$link-color-hover: shade($link-color, 15%);
+$base-shadow: rgba($black, 0.12);
+
+
+/***
+  Display
+**/
+$base-border-radius: 3px;
+$base-transition-duration: 150ms;
+
+
+/***
+  Typography
+**/
+$base-font-size: 14px;
+$base-line-height: 20px;
+$base-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$heading-font-family: "Pacifico", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$subhead-font-family: "Nothing You Could Do", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$button-font-family: "Pacifico", "Helvetica", Arial, sans-serif;
+$row-height: $base-line-height;
+
+
+/***
+  Grid
+**/
+$row-width: 100%;
+$column-gutter: 40px;
+$total-columns: 12;
+$include-html-classes: true;
+
+
+/***
+  Media Queries
+**/
+$small-range: (0, 640px);
+$medium-range: (641px, 1024px);
+$large-range: (1025px, 1440px);
+$xlarge-range: (1441px, 1920px);
+$xxlarge-range: (1921px);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+$small: $small-up;
+$medium: $medium-up;
+$large: $large-up;
+
+$large-mq: "(min-width: 1025px)";
+
+/***
+  Forms
+**/
+$input-background-color: $white;
+$input-background-color-disabled: $gray-light;
+$input-color: $gray-medium;
+$input-color-disabled: shade($gray-light, 25%);
+$input-border-color: shade($gray-light, 10%);
+$input-border-color-focus: $teal;
+$input-placeholder-color: #ccc;
+$input-border-radius: $base-border-radius * 10;
+$input-shadow: $base-shadow 0 1px 2px -1px;
+$input-shadow-active:
+  tint($teal, 7%) 0 0 0 1px inset,
+  tint($teal, 4%) 0 1px 2px -1px;
+
+
+/***
+  Button Base
+**/
+$button-background-color: desaturate(#FF426E, 20%);
+$button-background-color-hover: #FF426E;
+$button-color: $white;
+$button-border-radius: $base-border-radius;
+$button-border-box-shadow:
+  $base-shadow 0 1px 2px -1px;
+$button-text-shadow: $base-shadow 0 1px 0;

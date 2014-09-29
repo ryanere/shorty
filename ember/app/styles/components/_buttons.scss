@@ -1,0 +1,11 @@
+.button {
+  @include button-scaffold;
+  @include button-styles(
+   $button-color,
+   $button-background-color,
+   $button-background-color-hover,
+   $button-border-box-shadow,
+   $button-text-shadow,
+   $button-border-radius
+  );
+}

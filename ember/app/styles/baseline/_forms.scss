@@ -1,0 +1,46 @@
+form { margin: 0; }
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: block;
+  width: 100%;
+  height: $row-height * 2.5;
+  margin: 0;
+  padding: 0 ($base-font-size * 2);
+  color: $input-color;
+  background-color: $input-background-color;
+  outline: none;
+  border: none;
+  font-weight: normal;
+  @include placeholder($input-placeholder-color);
+  @include border-radius($input-border-radius);
+  @include adjust-font-size-to($base-font-size * 1.2, 1.2);
+  @include box-shadow($input-shadow);
+  @include transition-property(box-shadow);
+  @include transition-duration($base-transition-duration);
+  @include transition-timing-function(linear);
+  @include appearance(none);
+  @include hardware-accelerate;
+
+  &:focus {
+    @include box-shadow($input-shadow-active);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $input-background-color-disabled;
+    color: $input-color-disabled;
+  }
+}

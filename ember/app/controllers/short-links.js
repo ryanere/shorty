@@ -9,7 +9,8 @@ export default Ember.Controller.extend(
         allowBlank: true, // don't show "isBlank" errors off the bat
         allowIp:    true,
         allowPort:  true,
-        protocols:  ['http', 'https']
+        protocols:  ['http', 'https'],
+        message: 'Not a valid URL (ex: http://shortyrules.com)'
       }
     }
   },
