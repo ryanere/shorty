@@ -43,7 +43,7 @@ $base-line-height: 20px;
 $base-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 $heading-font-family: "Pacifico", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 $subhead-font-family: "Nothing You Could Do", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-$button-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$button-font-family: "Pacifico", "Helvetica", Arial, sans-serif;
 $row-height: $base-line-height;
 
 
@@ -98,37 +98,19 @@ $input-border-color: shade($gray-light, 10%);
 $input-border-color-focus: $teal;
 $input-placeholder-color: #ccc;
 $input-border-radius: $base-border-radius * 10;
-$input-shadow:
-  $base-shadow 0 1px 2px -1px;
+$input-shadow: $base-shadow 0 1px 2px -1px;
 $input-shadow-active:
   tint($teal, 7%) 0 0 0 1px inset,
   tint($teal, 4%) 0 1px 2px -1px;
-$input-shadow-error:
-  tint($red, 7%) 0 0 0 1px inset,
-  tint($red, 4%) 0 1px 2px -1px;
 
 
 /***
   Button Base
 **/
-$button-background-color: $gray-medium;
-$button-background-color-hover: tint($gray-medium, 10%);
+$button-background-color: desaturate(#FF426E, 20%);
+$button-background-color-hover: #FF426E;
 $button-color: $white;
 $button-border-radius: $base-border-radius;
 $button-border-box-shadow:
-  shade($gray-medium, 10%) 0 0 0 1px inset,
-  shade($gray-medium, 7%) 0 1px 2px -1px;
-$button-text-shadow: shade($gray-medium, 12%) 0 1px 0;
-
-
-/***
-  Button Primary
-**/
-$button-primary-background-color: $teal;
-$button-primary-background-color-hover: tint($teal, 8%);
-$button-primary-color: $white;
-$button-primary-border-radius: $base-border-radius;
-$button-primary-box-shadow:
-  shade($teal, 10%) 0 0 0 1px inset,
-  shade($teal, 7%) 0 1px 2px -1px;
-$button-primary-text-shadow: shade($teal, 12%) 0 1px 0;
+  $base-shadow 0 1px 2px -1px;
+$button-text-shadow: $base-shadow 0 1px 0;

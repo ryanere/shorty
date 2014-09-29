@@ -41,22 +41,6 @@
   @include translateZ(0);
 }
 
-@mixin content-padding {
-  @include content-padding-horizontal;
-  @include content-padding-vertical;
-}
-
-@mixin content-padding-horizontal {
-  padding-left: $column-gutter * 0.5;
-  padding-right: $column-gutter * 0.5;
-}
-
-@mixin content-padding-vertical {
-  padding-top: $row-height;
-  padding-bottom: $row-height;
-}
-
-
 @mixin phone {
   @media #{$small-only} {
     @content;
@@ -98,7 +82,7 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0 ($base-font-size);
+  padding: 0 ($base-font-size * 1.1);
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -106,7 +90,7 @@
   text-align: center;
   text-decoration: none;
   font-family: $button-font-family;
-  @include adjust-font-size-to($base-font-size, 2);
+  @include adjust-font-size-to($base-font-size * 1.2);
   @include font-smoothing;
   @include appearance(none);
   @include transition-property(background-color);
@@ -135,10 +119,7 @@
 
   &:hover {
     color: $color;
-
-    .no-touch & {
-      background-color: $background-color-hover;
-    }
+    background-color: $background-color-hover;
   }
 
   &:disabled {

@@ -1,9 +1,17 @@
-{{input value=url onEvent="enter" action="createShortLink" placeholder="Ex: http://awesome.com"}}
-
-{{#if errors}}
-  {{errors.url}}
-{{/if}}
-
-<button {{action "createShortLink"}}>Get Shorty</button>
+<div class="short-links">
+  <div class="short-links-cta">
+    <div class="row">
+      <div class="large-9 medium-9 small-12 columns">
+        {{input value=url onEvent="enter" action="createShortLink" placeholder="Ex: http://awesome.com" class="short-links-cta-input-field"}}
+        {{#if errors}}
+          <p class="short-links-errors">{{errors.url}}</p>
+        {{/if}}
+      </div>
+      <div class="large-3 medium-3 small-12 columns">
+        <button {{action "createShortLink"}} class="button short-links-cta-create-button">Get Shorty</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{outlet}}
