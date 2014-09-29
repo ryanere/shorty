@@ -21,7 +21,7 @@ export default Ember.Controller.extend(
     var url    = this.get('url'),
         errors = this.get('errors.url');
 
-    return (url.length && !errors.length) ? true : false;
+    return (url.length && !errors.length);
   }.property('url', 'errors.url'),
 
   actions: {
