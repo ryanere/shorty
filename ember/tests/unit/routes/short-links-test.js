@@ -7,7 +7,7 @@ import {
 
 var App;
 
-moduleFor('route:short-link', 'ShortLinkRoute', {
+moduleFor('route:short-links', 'ShortLinksRoute', {
   setup: function() {
     App = startApp();
   },
