@@ -1,0 +1,121 @@
+@include establish-baseline;
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+*:focus { outline: 0; }
+
+html {
+  overflow-y: scroll;
+  @include font-smoothing;
+  @include text-size-adjust;
+  @include remove-tap-highlight;
+}
+
+body {
+  font-family: $base-font-family;
+  color: $base-font-color;
+  background-color: $body-background-color;
+  cursor: auto;
+  @include background-image(radial-gradient(100% 100%, $body-background-color-highlight, $body-background-color));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $row-height;
+  font-weight: normal;
+  font-family: $heading-font-family;
+}
+
+h1 { @include adjust-font-size-to($base-font-size * 2.5); }
+h2 { @include adjust-font-size-to($base-font-size * 2.2); }
+h3 { @include adjust-font-size-to($base-font-size * 1.75); }
+h4 { @include adjust-font-size-to($base-font-size * 1.25); }
+h5 { @include adjust-font-size-to($base-font-size); }
+h6 { @include adjust-font-size-to($base-font-size * 0.75); }
+
+p {
+  margin: 0 0 $row-height;
+  @include adjust-font-size-to($base-font-size);
+}
+
+blockquote {
+  margin: 0 0 $row-height;
+  @include adjust-font-size-to($base-font-size * 1.75);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th {
+    font-weight: bold;
+    @include adjust-font-size-to($base-font-size);
+  }
+
+  td { @include adjust-font-size-to($base-font-size); }
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+
+  > li {
+    @include adjust-font-size-to($base-font-size);
+  }
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+
+  > li {
+    @include adjust-font-size-to($base-font-size);
+  }
+}
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include adjust-font-size-to($base-font-size);
+  @include transition-property(color);
+  @include transition-duration($base-transition-duration);
+  @include transition-timing-function(linear);
+  @include hardware-accelerate;
+
+  &:visited {}
+  &:hover {}
+  &:active { color: $link-color-hover; }
+  &:focus {}
+
+  .no-touch & {
+    &:hover { color: $link-color-hover; }
+  }
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: $base-font-family;
+  @include font-smoothing;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.main { position: relative; }

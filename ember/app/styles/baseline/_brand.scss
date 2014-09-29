@@ -1,0 +1,20 @@
+.brand {
+  margin: ($row-height * 2) 0 ($row-height * 3);
+  text-align: center;
+}
+.brand-link {
+  display: inline-block;
+  margin-bottom: $row-height;
+}
+.brand-text {
+  display: inline-block;
+  color: $white;
+  margin: 0;
+  @include text-shadow($base-shadow 0 2px 0);
+  @include adjust-font-size-to($base-font-size * 4.5);
+}
+.brand-subhead {
+  font-family: $subhead-font-family;
+  @include text-shadow($base-shadow 0 1px 0);
+  @include adjust-font-size-to($base-font-size * 2);
+}
