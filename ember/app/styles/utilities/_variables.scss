@@ -13,7 +13,7 @@ $purple: #8d95b3;
 $magenta: #a1788d;
 
 $gray-light: #eef3f7;
-$gray-medium: shade(#8b95a5, 5%);
+$gray-medium: #8b95a5;
 $gray-dark: #4e515e;
 
 
@@ -92,18 +92,43 @@ $large-mq: "(min-width: 1025px)";
 **/
 $input-background-color: $white;
 $input-background-color-disabled: $gray-light;
-$input-color: $base-font-color;
+$input-color: $gray-medium;
 $input-color-disabled: shade($gray-light, 25%);
 $input-border-color: shade($gray-light, 10%);
 $input-border-color-focus: $teal;
-$input-placeholder-color: shade($gray-light, 25%);
-$input-border-radius: $base-border-radius;
+$input-placeholder-color: #ccc;
+$input-border-radius: $base-border-radius * 10;
 $input-shadow:
-  shade($gray-light, 8%) 0 0 0 1px inset,
-  shade($gray-light, 4%) 0 1px 2px -1px;
+  $base-shadow 0 1px 2px -1px;
 $input-shadow-active:
   tint($teal, 7%) 0 0 0 1px inset,
   tint($teal, 4%) 0 1px 2px -1px;
 $input-shadow-error:
   tint($red, 7%) 0 0 0 1px inset,
   tint($red, 4%) 0 1px 2px -1px;
+
+
+/***
+  Button Base
+**/
+$button-background-color: $gray-medium;
+$button-background-color-hover: tint($gray-medium, 10%);
+$button-color: $white;
+$button-border-radius: $base-border-radius;
+$button-border-box-shadow:
+  shade($gray-medium, 10%) 0 0 0 1px inset,
+  shade($gray-medium, 7%) 0 1px 2px -1px;
+$button-text-shadow: shade($gray-medium, 12%) 0 1px 0;
+
+
+/***
+  Button Primary
+**/
+$button-primary-background-color: $teal;
+$button-primary-background-color-hover: tint($teal, 8%);
+$button-primary-color: $white;
+$button-primary-border-radius: $base-border-radius;
+$button-primary-box-shadow:
+  shade($teal, 10%) 0 0 0 1px inset,
+  shade($teal, 7%) 0 1px 2px -1px;
+$button-primary-text-shadow: shade($teal, 12%) 0 1px 0;
