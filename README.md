@@ -9,6 +9,7 @@ You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+* [Ember-CLI](http://www.ember-cli.com/)
 * [Ruby](https://www.ruby-lang.org/en/downloads/)
 * [Bundler](http://bundler.io/)
 * [Postgres](http://www.postgresql.org/)
@@ -16,7 +17,6 @@ You will need the following things properly installed on your computer.
 ## Ember Setup
 
 * `cd ember`
-* `npm install -g ember-cli`
 * `npm install`
 * `bower install`
 
