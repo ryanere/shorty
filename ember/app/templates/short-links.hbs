@@ -1,9 +1,16 @@
+<div class="brand">
+  {{#link-to "application" class="brand-link"}}
+    <h1 class="brand-text">Shorty</h1>
+  {{/link-to}}
+  <p class="brand-subhead">A link-shortener with style.</p>
+</div>
+
 <div class="short-links">
   <div class="short-links-cta">
     <div class="row">
       <div class="large-9 medium-9 small-12 columns">
         {{input value=url onEvent="enter" action="createShortLink" placeholder="Ex: http://shortyrules.com" class="short-links-cta-input-field"}}
-        {{#if errors}}
+        {{#if errors.url.length}}
           <p class="short-links-errors">{{errors.url}}</p>
         {{/if}}
       </div>

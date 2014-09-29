@@ -1,10 +1,10 @@
-.short-links-show {
+.short-link {
   text-align: center;
   margin-top: $row-height * 2;
   @include opacity(0);
   @include scale(0);
   @include transition-property(all);
-  @include transition-duration(500ms);
+  @include transition-duration(400ms);
   @include transition-timing-function(ease-in-out);
 
   &.visible {
@@ -12,16 +12,17 @@
     @include scale(1);
   }
 
-  .short-link-heading {}
+  .short-link-heading { margin-bottom: $row-height * 2; }
 
   .short-link-container {
     padding: $row-height;
     background-color: $white;
+    margin-bottom: $row-height;
     @include box-shadow($base-shadow);
     @include border-radius($base-border-radius);
   }
 
-  .short-link {
+  .short-link-path {
     font-weight: bold;
     @include adjust-font-size-to($base-font-size * 1.2);
   }
