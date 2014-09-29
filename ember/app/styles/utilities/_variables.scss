@@ -3,7 +3,7 @@
 **/
 $white: #fff;
 $black: #000;
-$red: #df3b28;
+$red: #FF426E;
 $orange: #f1910e;
 $yellow: #e9c90d;
 $green: #b6d400;
@@ -23,7 +23,7 @@ $gray-dark: #4e515e;
 $body-background-color: #26ADE4;
 $body-background-color-highlight: #4DBCE9;
 $base-font-color: $white;
-$link-color: $teal;
+$link-color: desaturate($red, 15%);
 $link-color-hover: shade($link-color, 15%);
 $base-shadow: rgba($black, 0.12);
 
@@ -107,8 +107,8 @@ $input-shadow-active:
 /***
   Button Base
 **/
-$button-background-color: desaturate(#FF426E, 20%);
-$button-background-color-hover: #FF426E;
+$button-background-color: desaturate($red, 20%);
+$button-background-color-hover: $red;
 $button-color: $white;
 $button-border-radius: $base-border-radius;
 $button-border-box-shadow:

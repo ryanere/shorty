@@ -3,13 +3,9 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('short-link', 'ShortLink', {
-  // Specify the other units that are required for this test.
-  needs: []
-});
+moduleForModel('short-link', 'ShortLink', {});
 
 test('it exists', function() {
   var model = this.subject();
-  // var store = this.store();
   ok(!!model);
 });

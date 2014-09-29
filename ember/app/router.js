@@ -6,9 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('short-links', { path: '/' }, function() {
-    this.route('show', { path: '/:short-link-id' });
-  });
+  this.route('short-links', { path: '/' });
+  this.route('short-link', { path: '/:short-link-id'});
 });
 
 export default Router;

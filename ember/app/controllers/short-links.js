@@ -35,7 +35,7 @@ export default Ember.Controller.extend(
           url: url
         }).save().then(function(shortLink) {
           controller.set('url', '');
-          controller.transitionToRoute('short-links.show', shortLink.id);
+          controller.transitionToRoute('short-link', shortLink.id);
         }, function(data) {
           controller.set('errors', data.errors);
         });

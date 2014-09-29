@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:short-links', 'ShortLinksController', {});
+moduleFor('controller:short-link', 'ShortLinkController', {});
 
 test('it exists', function() {
   var controller = this.subject();
